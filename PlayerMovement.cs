@@ -16,7 +16,9 @@ public class PlayerMovement : MonoBehaviour
 
     bool canJump = true;
     bool faceRight = true;
-
+    
+    // All Code is down
+    #region Codes
     private void Start()
     {
         joystick = FindObjectOfType<Joystick>();
@@ -47,6 +49,10 @@ public class PlayerMovement : MonoBehaviour
             Flip();
         }
     }
+    #endregion
+    
+    // Trigger anything code is down
+    
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.transform.tag == "Ground")
